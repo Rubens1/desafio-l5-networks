@@ -25,7 +25,7 @@ $routes->put('/editar-status/(:num)', 'PedidosController::atualizarStatus/$1');
 $routes->delete('/excluir-pedido/(:num)', 'PedidosController::excluir/$1');
 
 $routes->get('/usuarios', 'UsuariosController::usuarios');
-$routes->get('/info-produto/(:num)', 'UsuariosController::usuario/$1');
+$routes->get('/info-usuario/(:num)', 'UsuariosController::usuario/$1');
 $routes->post('/cadastrar-usuario', 'UsuariosController::cadastrar');
 $routes->put('/editar-usuario/(:num)', 'UsuariosController::editar/$1');
 $routes->delete('/excluir-usuario/(:num)', 'UsuariosController::excluir/$1');

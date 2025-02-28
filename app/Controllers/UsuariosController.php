@@ -96,12 +96,12 @@ class UsuariosController extends ResourceController
 
     public function editar($id)
     {
+
+        if (!$this->verificarToken()) {
+            return $this->failUnauthorized("Acesso negado.");
+        }
+        
         try {
-
-
-            if (!$this->verificarToken()) {
-                return $this->failUnauthorized("Acesso negado.");
-            }
 
             $model = new UsuarioModel();
             $data = $this->request->getJSON(true);
@@ -112,7 +112,10 @@ class UsuariosController extends ResourceController
             }
 
             $model->update($id, $data);
-            return $this->respond(["mensagem" => "Usuário atualizado com sucesso!"]);
+            return $this->response->setStatusCode(200)->setJSON([
+                "status" => 200,
+                "mensagem" => "Usuário atualizado com sucesso!"
+            ]);
 
         } catch (\Exception $e) {
             return $this->response->setStatusCode(500)->setJSON([
