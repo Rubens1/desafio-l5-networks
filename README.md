@@ -122,10 +122,5 @@ O sistema estará disponível em `http://localhost:8081`
 
 ---
 
-## 📜 Licença
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
 🚀 Desenvolvido por **Rubens Nogueira** para **L5 NETWORKS** 💻
 
